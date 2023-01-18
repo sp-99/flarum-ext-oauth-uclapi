@@ -9,11 +9,11 @@
  *  file that was distributed with this source code.
  */
 
-namespace IanM\OAuthAmazon;
+namespace IanM\OAuthUCLAPI;
 
 use Flarum\Extend;
 use FoF\OAuth\Extend as OAuthExtend;
-use IanM\OAuthAmazon\Providers\Amazon;
+use IanM\OAuthAmazon\Providers\UCLAPI;
 
 return [
     (new Extend\Frontend('forum'))
@@ -24,5 +24,5 @@ return [
 
     new Extend\Locales(__DIR__.'/locale'),
 
-    (new OAuthExtend\RegisterProvider(Amazon::class)),
+    (new OAuthExtend\RegisterProvider(UCLAPI::class)),
 ];
